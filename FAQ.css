@@ -1,0 +1,172 @@
+/* Thiết lập cho font chữ và margin mặc định */
+body {
+    font-family: Ariel, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-left a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-right: 20px;
+    font-weight: normal;
+    position: relative;
+    padding: 5px;
+}
+.nav-left a:hover {
+    color: black;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid black;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nav-right a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+.nav-right a:hover {
+    color: black;
+}
+.main {
+    padding: 20px;
+    width: 100%; /* Đảm bảo nội dung chiếm toàn bộ chiều rộng */
+    max-width: 800px; /* Chiều rộng tối đa cho nội dung chính */
+    background-color: #fff; /* Nền trắng cho nội dung */
+    border-radius: 8px; /* Bo góc cho nội dung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nội dung */
+    margin: 20px auto; /* Căn giữa và thêm khoảng cách trên/dưới */
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px 0; /* Khoảng cách trên và dưới tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+    border-bottom: 1px solid #ddd; /* Đường kẻ phân cách */
+    padding-bottom: 10px; /* Khoảng cách dưới đường kẻ */
+}
+
+.faq-section {
+    margin: auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd; /* Đường kẻ phân cách giữa các câu hỏi */
+    padding: 10px 0;
+}
+
+.faq-item label {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* Căn trái cho nội dung */
+    margin: 0 20px; /* Thêm khoảng cách giữa các câu hỏi */
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 16px;
+    color: #333;
+    padding: 0 20px; /* Căn lề trái cho nội dung câu trả lời */
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-content {
+    max-height: 100px; /* Đặt chiều cao lớn hơn để hiện nội dung */
+}
+
+.faq-item input[type="checkbox"]:checked + label .arrow {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0; /* Giảm padding cho footer */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Thêm khoảng cách trên footer */
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: #dad5d5;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #dad5d5;
+}

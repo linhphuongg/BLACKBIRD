@@ -1,0 +1,189 @@
+body {
+    font-family: 'Ariel', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-left a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-right: 20px;
+    font-weight: normal;
+    position: relative;
+    padding: 5px;
+}
+.nav-left a:hover {
+    color: black;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid black;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown -content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nav-right a {
+    text-decoration : none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+.nav-right a:hover {
+    color: black;
+}
+.main-content {
+    text-align: center;
+    padding: 50px 0;
+}
+.main-content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.main-content .description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.main-content .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.main-content .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.main-content .buttons .active {
+    background-color: #f5a623;
+    color: #fff;
+}
+.main-content .buttons .inactive {
+    background-color: #f0f0f0;
+    color: #000;
+}
+.main-content .buttons button:hover {
+    background-color: #f5a623;
+    color: #fff;
+}
+.articles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px;
+}
+.article {
+    width: 45%;
+    text-align: left;
+}
+.article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.article h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.article .blog-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+.article p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f5a623;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-links {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-info {
+    font-size: 12px;
+    color: #dad5d5;
+    margin-bottom: 5px;
+}
+.footer-copyright {
+    font-size: 12px;
+    color: #dad5d5;
+}

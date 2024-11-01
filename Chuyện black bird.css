@@ -1,0 +1,191 @@
+body {
+    font-family: 'Ariel', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-right: 20px;
+    font-weight: normal;
+    position: relative;
+    padding: 5px;
+}
+
+.nav-left a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+
+.nav-right a:hover {
+    color: black;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid black; /* Thêm border đen dưới ảnh lớn */
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content .story {
+    margin-bottom: 20px;
+}
+
+.content .location {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.content .location .info {
+    text-align: left;
+    color: #888;
+    font-weight: lighter;
+    padding: 0 50px; 
+    margin-right: 100px; 
+}
+
+.content .location .info p {
+    margin: 5px 0;
+}
+
+.content .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.content .buttons button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.additional-images img {
+    width: 50%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.additional-images img + img {
+    border-left: none;
+}
+
+.additional-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid black; /* Thêm border đen ở bốn góc */
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: #dad5d5;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #dad5d5;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cuộn quế mê say</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="cuon que me say.css">
+</head>
+<body>
+<header>
+    <div class="nav-left">
+        <a href="home page.html" class="logo">Black Bird</a>
+        <a href="Chuyện black bird.html">Về Black Bird</a>
+        <div class="dropdown">
+            <a href="header.html">Sản phẩm</a>
+            <div class="dropdown-content">
+                <a href="Cuộn quế mê say.html">Đồ uống</a>
+                <a href="Mềm tan đắng ngọt.html">Bánh ngọt</a>
+            </div>
+        </div>
+        <a href="Blog.html">Blog</a>
+        <a href="tuyển dụng.html">Tuyển dụng</a>
+    </div>
+    <div class="nav-right">
+        <a href="đăng nhập.html">Login</a>
+        <a href="cart.html">🛒</a>
+    </div>
+</header>
+
+<div class="content">
+    <div class="image">
+        <img alt="Cuộn quế mê say image" height="600" src="quấn quế mê say.png" width="600"/>
+    </div>
+    <div class="details">
+        <div class="breadcrumb">
+            Sản phẩm &gt; Bánh ngọt &gt; Cuộn quế mê say
+        </div>
+        <div class="title">
+            Cuộn quế mê say
+        </div>
+        
+        <div class="price-section">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()"/>
+            <div class="price">Giá: <span id="total-price">40.000</span> VND</div>
+        </div>
+       <div class="store-buttons">
+            <button onclick="addToCart('Cuộn quế mê say', 40000)">Thêm vào giỏ hàng</button>
+                    </div>
+        <div class="description">
+            Bánh cuộn với nhân quế thơm lừng và đường nâu, mềm xốp.
+        </dziv>
+        <div class="navigation">
+            <span><a href="Mềm tan đắng ngọt.html">Trước</a></span>
+            <span>Sau →</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const basePrice = 40000;
+
+    function updatePrice() {
+        const quantity = document.getElementById("quantity").value;
+        const totalPrice = basePrice * quantity;
+        document.getElementById("total-price").innerText = totalPrice.toLocaleString("vi-VN");
+    }
+
+    function addToCart(name, price) {
+        const quantity = parseInt(document.getElementById("quantity").value);
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        const existingItem = cart.find(item => item.name === name);
+        
+        if (existingItem) {
+            existingItem.quantity += quantity;  // Cộng thêm số lượng
+        } else {
+            cart.push({ name, price, quantity });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " với số lượng " + quantity + " đã được thêm vào giỏ hàng!");
+    }
+</script>
+
+</body>
+</html>

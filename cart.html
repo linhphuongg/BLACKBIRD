@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="styles cart.css">
+</head>
+<body>
+<header>
+    <div class="nav-left">
+        <div class="logo">Black Bird</div>
+        <a href="#">Về Black Bird</a>
+        <div class="dropdown">
+            <a href="header.html">Sản phẩm</a>
+            <div class="dropdown-content">
+                <a href="#">Đồ uống</a>
+                <a href="#">Bánh ngọt</a>
+            </div>
+        </div>
+        <a href="#">Blog</a>
+        <a href="#">Social</a>
+    </div>
+    <div class="nav-right">
+        <a href="#">Login</a>
+        <a href="cart.html">🛒</a>
+    </div>
+</header>
+
+<div class="cart-container">
+    <h2>Giỏ hàng của bạn</h2>
+    <div id="cart-items"></div>
+    <div class="total">
+        Tổng cộng: <span id="total-price">0</span> VND
+    </div>
+    <button onclick="checkout()">Thanh toán</button>
+</div>
+
+<script>
+    function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItemsContainer = document.getElementById("cart-items");
+        cartItemsContainer.innerHTML = "";
+
+        let totalPrice = 0;
+
+        cart.forEach((item, index) => {
+            const itemTotalPrice = item.price * item.quantity;
+            totalPrice += itemTotalPrice;
+
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("cart-item");
+            itemDiv.innerHTML = `
+                <span>${item.name}</span>
+                <span>Giá: ${item.price.toLocaleString("vi-VN")} VND</span>
+                <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index}, this.value)" />
+                <span>Tổng: ${itemTotalPrice.toLocaleString("vi-VN")} VND</span>
+                <button onclick="removeItem(${index})">Xóa</button>
+            `;
+
+            cartItemsContainer.appendChild(itemDiv);
+        });
+
+        document.getElementById("total-price").innerText = totalPrice.toLocaleString("vi-VN");
+    }
+
+    function updateQuantity(index, newQuantity) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[index].quantity = parseInt(newQuantity);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+    }
+
+    function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+    }
+
+    function checkout() {
+        alert("Cảm ơn bạn đã mua hàng!");
+        localStorage.removeItem("cart");
+        loadCart();
+    }
+
+    window.onload = loadCart;
+</script>
+
+</body>
+</html>

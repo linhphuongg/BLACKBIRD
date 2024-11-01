@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-left a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-right: 20px;
+    font-weight: normal;
+    position: relative;
+    padding: 5px;
+}
+.nav-left a:hover {
+    color: black;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid black;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nav-right a {
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+.nav-right a:hover {
+    color: black;
+}
+
+ .footer {
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-weight: normal;
+        }
+        .footer-links {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fffafa;
+            font-size: 14px;
+        }
+        .footer-info {
+            font-size: 12px;
+            color: #dad5d5;
+            margin-bottom: 5px;
+        }
+        .footer-copyright {
+            font-size: 12px;
+            color: #dad5d5;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-container h2 {
+            text-align: center;
+        }
+        
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        
+        .form-container input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .form-container button {
+            width: 95%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .form-container button:hover {
+            background: #555;
+        }
+        
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-info {
+            margin: bottom 20px;
+        }
